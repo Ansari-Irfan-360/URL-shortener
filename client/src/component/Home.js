@@ -11,8 +11,8 @@ import {
 import axios from "axios";
 import toast from "react-hot-toast";
 
-const FrontendUrl = "http://localhost:3000/"
-const BackendUrl = "http://localhost:4000";
+const FrontendUrl = "http://url-360.vercel.app/"
+const BackendUrl = "https://url-360.onrender.com";
 
 function Home() {
   const [URL, setURL] = useState("");
