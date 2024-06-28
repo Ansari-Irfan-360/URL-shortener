@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-const BackendUrl = "http://localhost:4000";
+const BackendUrl = "https://url-360.onrender.com";
 
 const Redirect = () => {
   const { redirectFrom } = useParams();
