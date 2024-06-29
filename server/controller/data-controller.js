@@ -64,3 +64,7 @@ export const getData = async (req, res) => {
     return res.status(500).json({ msg: "Error while Finding the data", error });
   }
 };
+
+export const checkServer = async (request, response) => {
+  response.status(200).json({msg:"Server is running"});
+}
