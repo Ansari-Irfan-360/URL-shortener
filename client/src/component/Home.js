@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Container,
   TextField,
@@ -10,6 +10,7 @@ import {
 } from "@mui/material";
 import axios from "axios";
 import toast from "react-hot-toast";
+import { clientCheck } from 'poll-server-check';
 
 const FrontendUrl = "http://url-360.vercel.app/"
 const BackendUrl = "https://url-360.onrender.com";
@@ -19,6 +20,10 @@ function Home() {
   const [showNewURL, setShowNewURL] = useState("");
   const [showCustomURL, setShowCustomURL] = useState(false);
   const [customURL, setCustomURL] = useState("");
+
+  useEffect(()=>{
+    clientCheck(BackendUrl);
+  },[]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();

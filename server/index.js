@@ -3,6 +3,7 @@ import Connection from './database/db.js';
 import dotenv from 'dotenv';
 import router from './route/route.js';
 import cors  from 'cors';
+import { serverCheck } from 'poll-server-check';
 
 dotenv.config();
 
@@ -18,6 +19,7 @@ app.use(express.json());
 const Port = 4000;
 
 app.use('/',router)
+serverCheck(app);
 
 app.listen(Port,()=>{
     console.log(`Server is running on Post ${Port}`)
