@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import { useEffect, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { clientCheck } from 'poll-server-check';
 
 const BackendUrl = "https://url-360.onrender.com";
